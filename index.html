@@ -13,7 +13,7 @@
 
 
 <body>
-	<!--navbar-->
+  <!--navbar-->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -26,61 +26,70 @@
           <a class="navbar-brand" href="#">Kings Of Cabins</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-    			<ul class="nav navbar-nav navbar-right">
-      				<li id="homeBtn"><a href="#">Home</a></li>
-      				<li id="contactBtn"><a href="#contact">Contact Us</a></li> 
-              		<li id="galleryBtn"class="dropdown">	
-              			<a href="#gallery" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery <span class="caret"></span></a>
-              			<ul class= "dropdown-menu">
-              				<li><a href="#gallery">General</a></li>
-              				<li role="separator" class="divider"></li>
-              				<li><a href="#gallery-cabin">Cabins</a></li>
-              				<li><a href="#gallery-patio">Patios</a></li>
-              				<li><a href="#gallery-fencing">Fencing</a></li>
-              			</ul>
-              		</li>
-    			</ul>
+          <ul class="nav navbar-nav navbar-right">
+              <li id="homeBtn"><a href="#">Home</a></li>
+              <li id="contactBtn"><a href="#contact">Contact Us</a></li> 
+                  <li id="galleryBtn"class="dropdown">  
+                    <a href="#gallery" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery <span class="caret"></span></a>
+                    <ul class= "dropdown-menu">
+                      <li><a href="#gallery">General</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#gallery-cabin">Cabins</a></li>
+                      <li><a href="#gallery-patio">Patios</a></li>
+                      <li><a href="#gallery-fencing">Fencing</a></li>
+                    </ul>
+                  </li>
+          </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
-	<div class="container">
+  <div id="contents" class="container">
 
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="">
-        <h1>Example Text</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      </div>
+      <!-- here is where each page contents is loaded into -->
 
-    </div> <!-- /container -->
+  </div> <!-- /container -->
     
     <footer class="footer">
       <div class="container">
-        <p class="text-muted">Website by Lawrence Gray</p>
+        <p class="text-muted">Website made by Lawrence Gray</p>
       </div>
     </footer>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<script>
-		$(document).ready(function(){
-			var pagehash = location.hash;
-			if (pagehash) {
-				if(pagehash.indexOf('gallery') > -1){
-  					$("#galleryBtn").addClass('active');
-				} else {
-        			$(pagehash+'Btn').addClass('active');
-        		}
-			} else {
-				$("#homeBtn").addClass('active');
-			}
-		});
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-		window.onhashchange = function() {
-		    window.location.reload()
-		}
-	</script>
+    <script>
+      $(document).ready(function(){
+       $('html, body').scrollTop(0);
+
+      $(window).on('load', function() {
+        setTimeout(function(){
+          $('html, body').scrollTop(0);
+        }, 0);
+     });
+      
+      var pagehash = location.hash;
+      if (pagehash) {
+        if(pagehash.indexOf('gallery') > -1){
+            $("#galleryBtn").addClass('active');
+            $("#contents").load("src/gallery_content.html");
+        } else {
+              $(pagehash+'Btn').addClass('active');
+              $("#contents").load('src/'+location.hash.substring(1)+'_content.html');
+            }
+      } else {
+        $("#homeBtn").addClass('active');
+        $("#contents").load("src/home_content.html");
+      }
+    });
+
+    window.onhashchange = function() {
+        window.location.reload()
+    }
+
+  </script>
 
 </body>
 
