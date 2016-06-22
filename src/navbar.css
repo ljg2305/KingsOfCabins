@@ -1,3 +1,7 @@
+body 
+{
+	padding-top: 70px;
+}
 .navbar
 {
 	background-color: #FA5A12;
@@ -16,11 +20,6 @@
 	{
 		font-size: 22px;
 	}
-}
-
-body 
-{
-	padding-top: 70px;
 }
 .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a
 {
