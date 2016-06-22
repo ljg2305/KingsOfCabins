@@ -1,0 +1,56 @@
+.navbar
+{
+	background-color: #FA5A12;
+}
+
+.navbar-default .navbar-brand
+{
+	color: #fff;
+	font-family: 'IM Fell French Canon', serif;
+	font-size: 28px;
+	font-variant: small-caps;
+	letter-spacing:0.25em; 
+}
+@media (max-width: 47.9em) {
+	.navbar-default .navbar-brand
+	{
+		font-size: 22px;
+	}
+}
+
+body 
+{
+	padding-top: 70px;
+}
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a
+{
+    color: #fff;
+    background-color: transparent;
+}
+.navbar-default .navbar-nav > .active > a
+{
+	border: 10px;	
+}
+ .navbar-default .navbar-nav > .open > a:focus
+{
+	background-color: #ff783b;
+}
+.navbar-nav .open .dropdown-menu
+{
+	background-color: #ff8853;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #fff;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
+    color: #555;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: #ff783b;
+}
+.navbar-default .navbar-toggle {
+    border-color: #fe854f;
+}
