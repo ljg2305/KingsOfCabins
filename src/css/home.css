@@ -4,6 +4,8 @@
 .img-responsive{
 	margin-bottom: 30px;
 }
-.vertical-center {
-  align-items: center;
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
 }
