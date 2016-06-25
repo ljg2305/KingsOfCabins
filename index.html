@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link href='https://fonts.googleapis.com/css?family=Old+Standard+TT:700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=IM+Fell+French+Canon' rel='stylesheet' type='text/css'>
-  <link href='src/navbar.css' rel='stylesheet' type='text/css'>
-  <link href='src/footer.css' rel='stylesheet' type='text/css'>
+  <link href='src/css/navbar.css' rel='stylesheet' type='text/css'>
+  <link href='src/css/footer.css' rel='stylesheet' type='text/css'>
 </head>
 
 
@@ -74,14 +74,14 @@
       if (pagehash) {
         if(pagehash.indexOf('gallery') > -1){
             $("#galleryBtn").addClass('active');
-            $("#contents").load("src/gallery_content.html");
+            $("#contents").load("src/content/gallery_content.html");
         } else {
               $(pagehash+'Btn').addClass('active');
-              $("#contents").load('src/'+location.hash.substring(1)+'_content.html');
+              $("#contents").load('src/content/'+location.hash.substring(1)+'_content.html');
             }
       } else {
         $("#homeBtn").addClass('active');
-        $("#contents").load("src/home_content.html");
+        $("#contents").load("src/content/home_content.html");
       }
     });
 
