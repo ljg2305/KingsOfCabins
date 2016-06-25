@@ -1,4 +1,4 @@
 #!/bin/bash
 # My first script
 
-sudo git pull
+sudo git pull origin master
