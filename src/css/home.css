@@ -4,6 +4,6 @@
 .img-responsive{
 	margin-bottom: 30px;
 }
-.jumbotron {
+.fill-height, .fill-height .jumbotron {
 	height: 100%;
 }
