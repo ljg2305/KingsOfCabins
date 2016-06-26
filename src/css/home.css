@@ -4,9 +4,13 @@
 .img-responsive{
 	margin-bottom: 30px;
 }
-.row-eq-height {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display:         flex;
+.parent {
+    display: table;
+    table-layout: fixed;
+}
+
+.child {
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
 }
