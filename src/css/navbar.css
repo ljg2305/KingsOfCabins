@@ -53,3 +53,7 @@ body
 .navbar-default .navbar-toggle {
     border-color: #fe854f;
 }
+.navbar-logo {
+	max-height: 50px;
+	margin: 0;
+}
