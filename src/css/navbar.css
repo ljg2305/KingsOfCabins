@@ -56,4 +56,5 @@ body
 }
 .navbar-logo {
 	max-height: 50px;
+	float:left;
 }
