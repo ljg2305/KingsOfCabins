@@ -14,6 +14,7 @@ body
 	font-size: 28px;
 	font-variant: small-caps;
 	letter-spacing:0.25em; 
+	margin: 0;
 }
 @media (max-width: 47.9em) {
 	.navbar-default .navbar-brand
