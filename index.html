@@ -25,7 +25,7 @@
             <span class="icon-bar"></span>
           </button>
           <div>
-          <a href="#"><img src="src/images/Kings_Of_Cabins_White.png" class="navbar-logo" align="middle left"><p class="navbar-brand">Kings Of Cabins</p></a>
+          <a href="#" id="logo-wrap"><img src="src/images/Kings_Of_Cabins_White.png" class="navbar-logo" id="logo-img"><p class="navbar-brand">Kings Of Cabins</p></a>
           </div>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
@@ -92,6 +92,14 @@
         window.location.reload()
     }
 
+
+  $(document).ready(function(){
+    $("logo-wrap").hover(function() {
+      $(logo-img).attr("src","src/images/Kings_Of_Cabins_Grey.png");
+      }, function() {
+        $(logo-img).attr("src","src/images/Kings_Of_Cabins_White.png");
+      });
+  });
   </script>
 
 </body>
