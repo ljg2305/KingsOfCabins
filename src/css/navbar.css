@@ -39,12 +39,6 @@ body
 {
 	background-color: #ff8853;
 }
-.navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #fff;
-}
-.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
-    color: #555;
-}
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #fff;
 }
@@ -58,7 +52,4 @@ body
 	max-height: 50px;
 	float:left;
 	margin-right:10px;
-}
-#logo-wrap:hover{
-    color: #555;
 }
