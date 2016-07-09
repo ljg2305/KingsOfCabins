@@ -11,7 +11,7 @@ $(document).ready(function(){
       if (pagehash) {
         if(pagehash.indexOf('gallery') > -1){
             $("#galleryBtn").addClass('active');
-            $("#contents").load("src/content/gallery_content.html",function(){            
+            $("#contents").load("src/content/gallery_content.html",function(){          
                 $('html,body').animate({
                   scrollTop:$(pagehash).offset().top
                 },500);
@@ -51,7 +51,8 @@ $(document).ready(function(){
         $("#logo-text").css({ 'color': '#fff'});
       });
   });
-$('a').on('click', function(event){     
+/*$('a').on('click', function(event){     
     event.preventDefault();
     $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
-});
+    window.location.hash = this.hash;
+*/
