@@ -11,10 +11,10 @@ $(document).ready(function(){
       if (pagehash) {
         if(pagehash.indexOf('gallery') > -1){
             $("#galleryBtn").addClass('active');
-            $("#contents").load("src/content/gallery_content.html",function(){
-              $('html,body').animate({
-                scrollTop:$(pagehash).offset().top - 70
-              },1000);
+            $("#contents").load("src/content/gallery_content.html",function(){            
+                $('html,body').animate({
+                  scrollTop:$(pagehash).offset().top
+                },1000);
             });
         } else {
               $(pagehash+'Btn').addClass('active');
@@ -27,11 +27,16 @@ $(document).ready(function(){
     });
 
     window.onhashchange = function() {
-      var pagehash = location.hash;
-      if(!(pagehash.indexOf('gallery') > -1)){
-        window.alert("page reloaded")
+      if($("#gallery-page").length && location.hash.indexOf('gallery')>-1) {
+        //window.alert("page not reloaded")#
+        if(location.hash == "#gallery"){
+          $('html,body').animate({
+            scrollTop:0
+          },1000);  
+        }
+      } else{
+       window.location.reload()
       }
-      window.location.reload()
     }
 
 
