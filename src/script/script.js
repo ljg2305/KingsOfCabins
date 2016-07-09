@@ -11,10 +11,11 @@ $(document).ready(function(){
       if (pagehash) {
         if(pagehash.indexOf('gallery') > -1){
             $("#galleryBtn").addClass('active');
-            $("#contents").load("src/content/gallery_content.html");
-            $('html,body').animate({
-              scrollTop:$().offset().top
-            },0);
+            $("#contents").load("src/content/gallery_content.html",function(){
+              $('html,body').animate({
+                scrollTop:$(pagehash).offset().top - 70
+              },1000);
+            });
         } else {
               $(pagehash+'Btn').addClass('active');
               $("#contents").load('src/content/'+location.hash.substring(1)+'_content.html');
@@ -26,7 +27,11 @@ $(document).ready(function(){
     });
 
     window.onhashchange = function() {
-        window.location.reload()
+      var pagehash = location.hash;
+      if(!(pagehash.indexOf('gallery') > -1)){
+        window.alert("page reloaded")
+      }
+      window.location.reload()
     }
 
 
