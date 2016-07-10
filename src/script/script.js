@@ -51,11 +51,7 @@ $(document).ready(function(){
         $("#logo-text").css({ 'color': '#fff'});
       });
   });
-/*$('a').on('click', function(event){     
-    event.preventDefault();
-    $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
-    window.location.hash = this.hash;
-*/
+
 $(document).ready(function(){
   // Add smooth scrolling to all links
   $("a").on('click', function(event) {
@@ -64,7 +60,10 @@ $(document).ready(function(){
     if (this.hash !== "") {
       // Prevent default anchor click behavior
       event.preventDefault();
-
+      // this is some default behavior that still needs to happen
+      $("button").attr("aria-expanded","false");
+      $("#navbar").attr("aria-expanded","false");
+      $("#navbar").addClass("collapsing");
       // Store hash
       var hash = this.hash;
 
@@ -80,7 +79,6 @@ $(document).ready(function(){
       } else {
         window.location.hash = hash;
       }
-
     } // End if
   });
 });
