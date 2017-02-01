@@ -16,18 +16,6 @@ $(document).ready(function(){
         $("#contents").load("src/content/home_content.html");
       }
     });
-
-    window.onhashchange = function() {
-      if($("#gallery-page").length && location.hash.indexOf('gallery')>-1) {
-        //window.alert("page not reloaded")#
-        if(location.hash == "#gallery"){
-          $('html,body').animate({
-            scrollTop:0
-          },500);  
-        }
-      } else{
-       window.location.reload()
-      }
     }
 
 
