@@ -36,7 +36,7 @@ $(document).ready(function(){
 
 
 function carouselNormalization() {
-  var items = $('#total_rfurb_carousel .item'), //grab all slides
+  var items = $('#total_refurb_carousel .item'), //grab all slides
         heights = [], //create empty array to store height values
         tallest; //create variable to make note of the tallest slide
 
