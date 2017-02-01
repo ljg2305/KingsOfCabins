@@ -59,6 +59,6 @@ function carouselNormalization() {
     } );
 }
 
-$(documnet).ready(function(){
+$(document).ready(function(){
     carouselNormalization()
 });
