@@ -17,6 +17,9 @@ $(document).ready(function(){
       }
     });
 
+    window.onhashchange = function() {
+       window.location.reload()
+    }
 
 
   $(document).ready(function(){
