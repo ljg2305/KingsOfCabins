@@ -9,17 +9,8 @@ $(document).ready(function(){
       
       var pagehash = location.hash;
       if (pagehash) {
-        if(pagehash.indexOf('gallery') > -1){
-            $("#galleryBtn").addClass('active');
-            $("#contents").load("src/content/gallery_content.html",function(){          
-                $('html,body').animate({
-                  scrollTop:$(pagehash).offset().top
-                },500);
-            });
-        } else {
               $(pagehash+'Btn').addClass('active');
               $("#contents").load('src/content/'+location.hash.substring(1)+'_content.html');
-            }
       } else {
         $("#homeBtn").addClass('active');
         $("#contents").load("src/content/home_content.html");
