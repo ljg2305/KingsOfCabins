@@ -34,33 +34,44 @@ $(document).ready(function(){
       });
   });
 
-/*$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-      // this is some default behavior that still needs to happen
-      $("button").attr("aria-expanded","false");
-      $("#navbar").attr("aria-expanded","false");
-      $("#navbar").addClass("collapsing");
-      // Store hash
-      var hash = this.hash;
+// Normalize Carousel Heights - pass in Bootstrap Carousel items.
+$.fn.carouselHeights = function() {
 
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified 
-      if($(hash).length){
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-      } else {
-        window.location.hash = hash;
-      }
-    } // End if
-  });
-});*/
+    var items = $(this), //grab all slides
+        heights = [], //create empty array to store height values
+        tallest; //create variable to make note of the tallest slide
+
+    var normalizeHeights = function() {
+
+        items.each(function() { //add heights to array
+            heights.push($(this).height()); 
+        });
+        tallest = Math.max.apply(null, heights); //cache largest value
+        items.each(function() {
+            $(this).css('min-height',tallest + 'px');
+        });
+    };
+
+    normalizeHeights();
+
+    $(window).on('resize orientationchange', function () {
+        //reset vars
+        tallest = 0;
+        heights.length = 0;
+
+        items.each(function() {
+            $(this).css('min-height','0'); //reset min-height
+        }); 
+        normalizeHeights(); //run it again 
+    });
+
+};
+
+jQuery(function($){
+
+    $(window).on('load', function(){
+        $('#total_refurb_carousel .item').carouselHeights();
+    });
+
+});
