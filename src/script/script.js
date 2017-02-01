@@ -59,6 +59,6 @@ function carouselNormalization() {
     } );
 }
 
-$(document).ready(function(){
-    carouselNormalization()
-});
+window.onload = function() {
+  carouselNormalization();
+}
