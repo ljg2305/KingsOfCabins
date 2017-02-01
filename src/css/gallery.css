@@ -1,3 +1,3 @@
-.scroll-offset {
-	height: 50px;
+.carousel-inner > .item > img {
+    margin: 0 auto;
 }
