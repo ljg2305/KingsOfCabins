@@ -35,7 +35,7 @@ $(document).ready(function(){
   });
 
 
-function carouselNormalization() {
+/*function carouselNormalization() {
   var items   = $('#total_refurb_carousel .item'),              // grab all the slides
       heights = [],                                   // array to store heights
       tallest;                                        // tallest slide
@@ -70,4 +70,4 @@ function carouselNormalization() {
 
 window.onload = function() {
   carouselNormalization();
-}
+}*/
