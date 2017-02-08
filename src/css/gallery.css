@@ -1,3 +1,10 @@
 .carousel-inner > .item > a > img {
     margin: 0 auto;
 }
+
+a.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
